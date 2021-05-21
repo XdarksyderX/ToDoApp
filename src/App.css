@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+    color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    
+    background: linear-gradient(70deg, #ff9100, #7622d6);
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0 5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.background-header {
+    width: 75%;
+    background-color: white;
+    text-align: center;
+    border-radius: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+header h1 {
+    font-size: 5rem;
+    background: -webkit-linear-gradient(70deg, #ff9100, #7622d6);
+    margin: 0.5rem;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input[type="text"] {
+   width: 48%;
+   height: 7rem;
+   border: none;
+   color: #7622d6;
+   background: white;
+   font-size: 3rem;
+   margin: 1rem;
+   outline: none;
+   text-align: center;
+   border-radius: 40px;
+}
+
+form input[type="button"] {
+    width: 19%;
+    height: 7rem;
+    font-size: 3rem;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    background-color: #ff9100;
+    transition: 0.4s;
+}
+
+form input[type="button"]:hover {
+    color: #7622d6;
+    background-color: white;
+    transition: 0.4s;
+}
+
+
+.task-list {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.task-list .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2em;
+    background-color: white;
+    width: 67%;
+    min-height: 20em;
+    border-radius: 50px;
+}
+
+.task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-left: 5em;
+    width: 100%;
+    height: 40%;
+}
+
+.task span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    background-color: #7622d6;
+    border-radius: 50px;
+    width: 70%;
+    height: 55%;
+    
+}
+
+.task .buttons {
+    display: flex;
+    width: 30%;
+    margin: 50px;
+}
+
+.task .buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4vw;
+    border-radius: 100%;
+    width: 5vw;
+    height: 5vw;
+    outline: none;
+    border: none;
+    margin: 5px;
+}
+
+.task .buttons .delete-button {
+    background-color: rgb(243, 92, 92);
+}
+
+.task .buttons .check-button {
+    background-color: rgb(92, 243, 117);
+    
+}
+
+.completed span{
+    text-decoration: line-through;
+    background-color: #b887f1;
+}
+
+.completed .buttons .check-button {
+    display: none;
+    transition: 0.4s;
+}
+
+
+.task-list .container h1 {
+    text-align: center;
+    color: #7622d6;
+    font-size: 8rem;
 }
